@@ -1,0 +1,31 @@
+.main{
+  max-width: 600px;
+  margin: 20px auto;
+  width: 100%;
+}
+.card-div{
+  .name-des-img{
+    width: 100%;
+    h3{
+      margin: 4px;
+    }
+    p{
+      margin: 4px;
+    }
+  }
+}
+.profile-img{
+  img{
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border: 1px solid #7D7D7D;
+  }
+}
+
+.back{
+  .mat-icon{
+    // transform: rotate(180deg) !important;
+    text-decoration: none;
+  }
+}

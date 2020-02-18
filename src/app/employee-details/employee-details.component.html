@@ -1,0 +1,33 @@
+<ng-container *ngIf="employeeDetails | async as employee">
+  <div class="main">
+    <mat-card>
+      <div class="row">
+        <button (click)="back()" mat-icon-button aria-label="Example icon-button with a heart icon">
+          <mat-icon>chevron_left</mat-icon>
+        </button>
+        <button (click)="go()" mat-icon-button aria-label="Example icon-button with a heart icon">
+          <mat-icon>chevron_right</mat-icon>
+        </button>
+      </div>
+      <div class="row card-div">
+        <div class="column name-des-img">
+          <h3>{{employee.name}}</h3>
+          <p>{{employee.designation}}, {{employee.department}}</p>
+          <div class="row">
+            <div class="profile-img">
+              <img src="assets/{{employee.img_link}}.jpg" [alt]="employee.img_link">
+            </div>
+            <p>{{employee.bio}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="back">
+        <a routerLink="/" class="row row-center-start row-center">
+          <!--<mat-icon>arrow_left</mat-icon>-->
+          <span><<</span>
+          <span>Back to List</span>
+        </a>
+      </div>
+    </mat-card>
+  </div>
+</ng-container>
