@@ -1,21 +1,19 @@
 <div class="main">
-  <div class="sub">
-      <mat-card *ngFor="let item of employeeses; let i=index" (deferLoad)="item.show = true">
-        <div class="row row-center-space-between">
-          <div class="row card-div">
-            <ng-container *ngIf="item.show">
-              <img src="assets/{{item.img_link}}.jpg" alt="">
-            </ng-container>
-            <div class="column">
-              <h3>{{item.name}}</h3>
-              <span>{{item.designation}}</span>
-              <p>{{item.department}}</p>
-            </div>
-          </div>
-          <div class="column column-end-center column-end link">
-            <a [routerLink]="['/employee-details',i]" >See Full Bio</a>
-          </div>
+  <mat-card *ngFor="let item of employeeses; let i=index" (deferLoad)="item.show = true" [attr.id]="i">
+    <div class="row row-center-space-between">
+      <div class="row card-div">
+        <ng-container *ngIf="item.show">
+          <img src="assets/{{item.img_link}}.jpg" alt="">
+        </ng-container>
+        <div class="column">
+          <h3>{{item.name}}</h3>
+          <span>{{item.designation}}</span>
+          <p>{{item.department}}</p>
         </div>
-    </mat-card>
+      </div>
+      <div class="column column-end-center column-end link">
+        <a [routerLink]="['/employee-details',i]">See Full Bio</a>
+      </div>
     </div>
-  </div>
+  </mat-card>
+</div>
